@@ -5,6 +5,7 @@ from task_link import TaskLink
 
 @dataclass
 class Task:
+    """ Result of calling the Tasks API https://tasks.googleapis.com/tasks/v1/lists/{tasklist}/tasks/{task} endpoint """
     kind: str
     id: str
     title: str
