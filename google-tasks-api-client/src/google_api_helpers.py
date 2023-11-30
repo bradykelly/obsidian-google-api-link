@@ -1,14 +1,15 @@
-import json
-import os.path
 from typing import Any
+import json, os
 
-from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-from op_cli import get_secure_note_field, run_op_command
+from security.op_cli import get_secure_note_field, run_op_command
 
 
+# If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/tasks.readonly"]
 OP_VAULT = "Google API"
 OP_ITEM = "Google Tasks API"
@@ -42,3 +43,18 @@ def get_tasks_api_credentials() -> Credentials:
         token.write(creds.to_json())
 
     return creds
+
+
+def get_task_service():
+    """ Get a Google Tasks API service object.
+
+    This function retrieves the Google Tasks API service object by obtaining the necessary credentials
+    and building the service using the tasks version 1.
+
+    Returns:
+        The Google Tasks API service object.
+    """
+
+    creds: Credentials = get_tasks_api_credentials()
+    service: Any = build("tasks", "v1", credentials=creds)
+    return service
