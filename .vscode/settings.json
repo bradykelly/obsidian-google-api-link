@@ -1,3 +1,8 @@
 {
-    "search.useIgnoreFiles": false
+    "search.useIgnoreFiles": false,
+    "sonarlint.connectedMode.project": {
+        "connectionId": "http-localhost-9000",
+        "projectKey": "obsidian-google-tasks"
+    },
+    "dotnet.defaultSolution": "AdventOfCode.sln"
 }

@@ -1,0 +1,6 @@
+projectKey=obsidian-google-tasks
+serverUrl=http://localhost:9000
+serverVersion=9.9.3.79811
+dashboardUrl=http://localhost:9000/dashboard?id=obsidian-google-tasks
+ceTaskId=AYwiotVvIM5wSgYsxcCl
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYwiotVvIM5wSgYsxcCl

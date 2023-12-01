@@ -28,3 +28,4 @@ cmake-build-*/
 
 # Editor-based Rest Client
 .idea/httpRequests
+AdventOfCode.sln
